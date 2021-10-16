@@ -1,0 +1,11 @@
+.drawer-container {
+  height: calc(100vh - 64px);
+}
+
+.sidenav {
+  width: 360px;
+}
+
+.main-container {
+  padding: 16px;
+}
