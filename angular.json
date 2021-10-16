@@ -62,14 +62,16 @@
               "sourceMap": true,
               "namedChunks": true
             },
-            "ssr": {
+            "deploy": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.ssr.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "outputPath": "docs",
+              "baseHref": "/ngx-universal-prerender-demo/"
             }
           },
           "defaultConfiguration": "production"
@@ -115,7 +117,7 @@
           "options": {
             "outputPath": "dist/ngx-universal-prerender-demo/server",
             "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
+            "tsConfig": "tsconfig.server.json",
           },
           "configurations": {
             "production": {
@@ -176,6 +178,10 @@
             },
             "ssr": {
               "browserTarget": "ngx-universal-prerender-demo:build:production",
+              "serverTarget": "ngx-universal-prerender-demo:server:ssr"
+            },
+            "deploy": {
+              "browserTarget": "ngx-universal-prerender-demo:build:deploy",
               "serverTarget": "ngx-universal-prerender-demo:server:ssr"
             }
           },
