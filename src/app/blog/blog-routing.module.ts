@@ -1,3 +1,4 @@
+import { TitleResolver } from './title.resolver';
 import { PostResolver } from './post.resolver';
 import { PostComponent } from './post/post.component';
 import { PostsComponent } from './posts/posts.component';
@@ -13,7 +14,10 @@ const routes: Routes = [
   },
   {
     path: 'post/:slug',
-    resolve: { post: PostResolver },
+    resolve: {
+      post: PostResolver,
+      title: TitleResolver
+    },
     component: PostComponent,
   },
 ];
