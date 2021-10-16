@@ -1,3 +1,2 @@
-<div class="post-content">
-  {{ content$ | async }}
+<div class="post-content" [innerHTML]="content$ | async">
 </div>

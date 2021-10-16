@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-post',
@@ -8,9 +9,16 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
-  content$ = this.route.paramMap.pipe(map((paramMap) => paramMap.get('slug')));
+  content$ = this.route.data.pipe(
+    map((data) => data.post),
+    filter((data) => !!data),
+    map(content => this.domSanitizer.bypassSecurityTrustHtml(content))
+  );
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private domSanitizer: DomSanitizer
+  ) {}
 
   ngOnInit(): void {}
 }

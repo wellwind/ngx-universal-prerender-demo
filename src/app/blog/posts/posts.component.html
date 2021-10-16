@@ -1,6 +1,5 @@
 <ul>
-  <li><a routerLink="/blog/post/post-1">post-1</a></li>
-  <li><a routerLink="/blog/post/post-2">post-2</a></li>
-  <li><a routerLink="/blog/post/post-3">post-3</a></li>
-  <li><a routerLink="/blog/post/post-4">post-4</a></li>
+  <li *ngFor="let post of posts$ | async">
+    <a [routerLink]="['/blog/post', post.slug]">{{ post.title }}</a>
+  </li>
 </ul>

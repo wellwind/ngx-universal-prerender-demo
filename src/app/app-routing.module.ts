@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'site-map',
     component: SiteMapComponent
+  },
+  {
+    path: 'blog',
+    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
   }
 ];
 

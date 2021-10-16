@@ -1,0 +1,4 @@
+/blog/post/post-1
+/blog/post/post-2
+/blog/post/post-3
+/blog/post/post-4
