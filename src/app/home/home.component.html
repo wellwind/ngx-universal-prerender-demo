@@ -1,1 +1,6 @@
 <p>home works!</p>
+<mat-divider></mat-divider>
+<h1>TODOs</h1>
+<ul>
+  <li *ngFor="let item of todos$ | async">{{ item.title }}</li>
+</ul>

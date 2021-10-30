@@ -11,6 +11,7 @@ import { SiteMapComponent } from './site-map/site-map.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import {TransferHttpCacheModule} from '@nguniversal/common';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,11 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    BrowserTransferStateModule,
+    // 如果 import TransferHttpCacheModule，那麼 BrowserTransferStateModule 就不用 import
+    // BrowserTransferStateModule,
+    // 如果要 cache 傳遞給 client 的都是 http get
+    // 可以直接使用 TransferHttpCacheModule，省去自行設定 cache 的時間
+    TransferHttpCacheModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
