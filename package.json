@@ -13,7 +13,8 @@
     "prerender": "ng run ngx-universal-prerender-demo:prerender",
     "prerender:posts": "npm run prerender -- --configuration ssr --routes-file post-routes.txt",
     "prerender:deploy": "npm run prerender -- --configuration deploy --routes-file post-routes.txt",
-    "serve:prerender": "npx ts-node --project tsconfig.ssr-preview.json ssr-preview.ts"
+    "serve:prerender": "npx ts-node --project tsconfig.ssr-preview.json ssr-preview.ts",
+    "serve:assets": "npx lite-server --baseDir=./src"
   },
   "private": true,
   "dependencies": {

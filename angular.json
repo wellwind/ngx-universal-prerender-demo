@@ -142,7 +142,7 @@
                   "with": "src/environments/environment.ssr.ts"
                 }
               ]
-            },
+            }
           },
           "defaultConfiguration": "production"
         },
@@ -151,11 +151,11 @@
           "configurations": {
             "development": {
               "browserTarget": "ngx-universal-prerender-demo:build:development",
-              "serverTarget": "ngx-universal-prerender-demo:server:development"
+              "serverTarget": "ngx-universal-prerender-demo:server:ssr"
             },
             "production": {
               "browserTarget": "ngx-universal-prerender-demo:build:production",
-              "serverTarget": "ngx-universal-prerender-demo:server:production"
+              "serverTarget": "ngx-universal-prerender-demo:server:ssr"
             }
           },
           "defaultConfiguration": "development"
