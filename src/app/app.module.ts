@@ -26,7 +26,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
     // BrowserTransferStateModule,
     // 如果要 cache 傳遞給 client 的都是 http get
     // 可以直接使用 TransferHttpCacheModule，省去自行設定 cache 的時間
-    // TransferHttpCacheModule,
+    TransferHttpCacheModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
