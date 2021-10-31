@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformServer } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngx-universal-prerender-demo';
+
+  isServer = isPlatformServer(this.platformId);
+
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {
+  }
 }

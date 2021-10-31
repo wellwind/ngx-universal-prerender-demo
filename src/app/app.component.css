@@ -6,6 +6,10 @@
   width: 360px;
 }
 
+.server-margin {
+  margin-left: 360px;
+}
+
 .main-container {
   padding: 16px;
 }

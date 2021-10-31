@@ -9,7 +9,7 @@
     </mat-list>
   </mat-drawer>
 
-  <div class="main-container">
+  <div class="main-container" [class.server-margin]="isServer">
     <router-outlet></router-outlet>
   </div>
 
