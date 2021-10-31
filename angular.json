@@ -155,7 +155,7 @@
             },
             "production": {
               "browserTarget": "ngx-universal-prerender-demo:build:production",
-              "serverTarget": "ngx-universal-prerender-demo:server:ssr"
+              "serverTarget": "ngx-universal-prerender-demo:server:production"
             }
           },
           "defaultConfiguration": "development"
